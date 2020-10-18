@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:layouting/menus/GalleryWisata.dart';
 import 'package:layouting/menus/Home.dart';
 import 'package:layouting/menus/LokasiWisata.dart';
 import 'package:layouting/menus/Message.dart';
 import 'package:layouting/menus/PortalWisata.dart';
+import 'package:layouting/menus/VideoWisata.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -182,7 +184,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Message()));
+                    MaterialPageRoute(builder: (context) => VideoWisata()));
               },
             ),
             ListTile(
@@ -191,7 +193,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Message()));
+                    MaterialPageRoute(builder: (context) => GalleryWisata()));
               },
             ),
             Divider(
