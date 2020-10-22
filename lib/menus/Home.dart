@@ -9,6 +9,7 @@ class Home extends StatelessWidget {
       // routes: {
       //   SplashScreen.id: (context) => HomePage(),
       // },
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }

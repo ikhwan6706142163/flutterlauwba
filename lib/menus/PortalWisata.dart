@@ -11,8 +11,8 @@ class PortalWisata extends StatelessWidget {
       title: 'Belajar Layouting',
       debugShowCheckedModeBanner: false,
       home: MyHomePage(
-        title: 'Belajar Layouting',
-      ),
+          // title: 'Belajar Layouting',
+          ),
     );
   }
 }
