@@ -239,12 +239,12 @@ class _LoginState extends State<Login> {
     }
   }
 
-  Future<List<dynamic>> login() async {
-    Response response = await this.get('https://www.lauwba.com/webservices/get_latest_news');
-    Map result = convert.jsonDecode(response.body);
-    print(result);
-    return result['data'];
-  }
+  // Future<List<dynamic>> login() async {
+  //   Response response = await this.get('https://www.lauwba.com/webservices/get_latest_news');
+  //   Map result = convert.jsonDecode(response.body);
+  //   print(result);
+  //   return result['data'];
+  // }
 
 
 // http://192.168.18.146/api_login/login.php
