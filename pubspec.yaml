@@ -23,10 +23,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  carousel_pro:
-  google_maps_flutter: 
-  flutter_youtube_view: 
-
+  carousel_slider: ^1.3.0
+  google_maps_flutter: any
+  flutter_youtube_view: any
+  webview_flutter: any
+  progress_dialog: any
+  http: any
+  shared_preferences: any
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

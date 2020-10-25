@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:layouting/halaman_utama/Dashboard.dart';
+import 'package:layouting/halaman_utama/Login.dart';
 import 'package:layouting/menus/Home.dart';
 
 // class SplashScreen extends StatefulWidget {
@@ -57,9 +57,9 @@ class _SplashScreen extends State<SplashScreen> {
   splashscreenStart() async {
     var duration = const Duration(seconds: 3);
     return Timer(duration, () {
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Dashboard()),
+        MaterialPageRoute(builder: (context) => Login()),
       );
     });
   }
@@ -74,7 +74,7 @@ class _SplashScreen extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Icon(
-              Icons.dry_cleaning,
+              Icons.add_chart,
               size: 100.0,
               color: Colors.white,
             ),
@@ -82,7 +82,7 @@ class _SplashScreen extends State<SplashScreen> {
               height: 24.0,
             ),
             Text(
-              "LAUNDRYKU",
+              "TokoKu",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,

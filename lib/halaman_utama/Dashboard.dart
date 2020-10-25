@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:layouting/menus/BeritaWisata.dart';
 import 'package:layouting/menus/GalleryWisata.dart';
 import 'package:layouting/menus/Home.dart';
 import 'package:layouting/menus/LokasiWisata.dart';
@@ -159,6 +160,15 @@ class _DashboardDetailState extends State<DashboardDetail> {
                 Navigator.of(context).pop();
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Dashboard()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.dashboard),
+              title: Text("Berita Wisata Web"),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => BeritaWisata()));
               },
             ),
             ListTile(

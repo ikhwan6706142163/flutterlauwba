@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:layouting/SplashScreen.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -23,12 +24,50 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  static final List<String> imgSldr = [
+    'kucing1.jpg', //index 0
+    'kucing2.jpg', //index 1
+    'kucing3.jpg', //index 2
+    // 'https://mmc.tirto.id/image/otf/700x0/2019/01/08/kucing-sedih-istockphoto_ratio-16x9.jpg'
+  ];
   String _gantiText = "ikang tengiri enak bro";
+  // final CarouselSlider imageSection = CarouselSlider(
+  //   items: imgSldr.map((e) {
+  //       return Container(
+  //         margin: EdgeInsets.all(5.0),
+  //         child: ClipRRect(
+  //           borderRadius:BorderRadius.circular(10),
+  //           // ignore: unnecessary_brace_in_string_interps
+  //           child: Image.asset('assets/images/${e}',
+  //           width: 10000,
+  //           fit: BoxFit.cover
+  //           )
+  //         )
+  //       );
+  //     }).toList(),
+  //   // child: Image.asset('assets/images/a.jpg'),
+  // );
+
   @override
   Widget build(BuildContext context) {
-    Widget imageSection = Container(
-      child: Image.asset('assets/images/a.jpg'),
-    );
+    final CarouselSlider imageSection = CarouselSlider(
+        items: imgSldr.map((e) {
+          return Container(
+              margin: EdgeInsets.all(5.0),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  // ignore: unnecessary_brace_in_string_interps
+                  child: Image.asset('assets/images/${e}',
+                      width: 10000, fit: BoxFit.cover)));
+        }).toList(),
+        // options: null,
+        height: 150,
+        autoPlay: true,
+        enlargeCenterPage: true,
+        aspectRatio: 2.0
+        // child: Image.asset('assets/images/a.jpg'),
+        );
+
     Widget titleSection = Container(
       padding: EdgeInsets.all(10),
       child: Text('Ikan Makarel',
